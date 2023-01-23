@@ -14,7 +14,7 @@ Verde: #39b54a; */
 
 a {
     text-decoration: none;
-    
+
 }
 
 body{
@@ -124,6 +124,10 @@ section {
     margin: 10px auto;
 }
 
+main article{
+    margin-bottom: 10px;
+}
+
 main section article i {
     display: block;
     font-size: 16px;
@@ -139,21 +143,34 @@ main section article i {
     color: #39b54a;
 }
 
+.price-box{
+    display: flex;
+    align-items: stretch;
+}
+
+
 .title-section-main {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 24px;
 }
+
 .align-img{
     margin: 10px;
     background-color: #fff;
     border-radius: 10px;
+    border: solid 1px #ebebeb;
 }
 
 .main-img{
     width: 80vw;
     height: 40vh;
     padding: 10px;
+
 }
+/* article .align-img:hover{
+    background-color: red;
+    transition: background-color .5s;
+ } */
 
 .description{
     border-top: solid 1px #ebebeb;
@@ -165,18 +182,25 @@ main section article i {
 
 .price-article {
     font-size: 18px;
-    flex-grow: .3;
+    /* flex-grow: .3; */
+    margin-left: 10px;
 }
 
 .discount-article{
     font-size: 13px;
     color: #39b54a;
+    margin-left: 10px;
 }
 
 .description-article{
     font-size: 16px;
     padding-top: 15px;
 }
+
+section .nav{
+    display: flex;
+}
+
 
 /*--------------------------- FOOTER ------------------------- */
 
@@ -233,6 +257,12 @@ main section article i {
     .home-banner{
         display: none;
     }
+
+    .main-search{
+        height: 22px;
+        width: 220px;
+        margin: 5px;
+    }
 }
 
 @media (min-width: 361px){
@@ -246,8 +276,9 @@ main section article i {
         }
 
         .main-search{
-            height: 50px;
-            margin: auto;
+            height: 22px;
+            width: 220px;
+            margin: 5px;
         }
 
         .burger-menu {
@@ -258,18 +289,22 @@ main section article i {
             width:100vw;
             padding: 0;
         }
-    
+
         .align-img{
             box-shadow: 0px 0px 10px rgb(100, 100, 100);
             width: 40vw;
         }
-        
+
         .main-img{
             width: 90%;
-            height: 40vh;
+            height: auto;
         }
-    
+        .description-article{
+            font-size: 13px;
+            padding-top: 15px;
+        }
     }
+
 
 @media (min-width: 769px) {
     body{
@@ -277,15 +312,34 @@ main section article i {
     }
 
     .nav-all{
-        display: flex;
+        /* display: flex; */
         width: 100vw;
     }
 
+    .nav-left li a{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .nav-right li a{
+        display: flex;
+        justify-content: flex-end;
+    }
 
     .title-header {
         margin: auto 0;
         flex-grow: .3;
+        text-align: center;
+        font-size: 12px;
     }
+
+    .main-search{
+        height: 25px;
+        margin: auto;
+        margin-left: 15px;
+    }
+
+
 
     .main-header-top-bar {
         flex-grow: .60;
@@ -293,7 +347,7 @@ main section article i {
     }
 
     .logo-header{
-        height: 100%;
+        height: 90%;
         width: 50%;
     }
 
@@ -308,17 +362,26 @@ main section article i {
 
     .align-img{
         width: 21vw;
-        height: 60vh;
+        height: 46vh;
     }
-    
+
     .main-img{
         width: 90%;
-        height: 40vh;
+        height: auto;
+    }
+
+    .description-article{
+        font-size: 13px;
+        padding-top: 15px;
     }
 
 }
 
+
 @media (min-width: 1200px) {
+    body{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
     .logo {
         width: 250px;
     }
@@ -329,11 +392,16 @@ main section article i {
     }
 
     .title-header {
-        max-width: none;
-        font-size: 22px;
-        font-weight: 400;
-        text-align: right;
-        margin: 0;
+        margin: auto 0;
+        flex-grow: .3;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .main-search{
+        height: 25px;
+        margin: auto;
+        margin-left: 15px;
     }
 
     .home-banner{
@@ -341,5 +409,38 @@ main section article i {
         padding: 0;
     }
 
-    
+}
+
+@media (min-width: 1440px) {
+    body{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .home-banner{
+        width:100vw;
+        padding: 0;
+    }
+
+    .title-header {
+    max-width: none;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin: 32px 5px 0 0;
+    }
+    .main-search{
+        height: 40px;
+        margin: auto;
+    }
+    .title-header {
+        max-width: none;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        margin: 55px 3px
+    }
+    .main-search{
+        height: 28px;
+        width: 280px;
+        margin: auto;
+    }
 }
